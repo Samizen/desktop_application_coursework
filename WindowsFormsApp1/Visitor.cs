@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
         public Visitor() { }
 
         // Parameterized Constructor
-        public Visitor(string ticketID, string name, int age,Boolean isGroup,int groupOf,DateTime entryTime, DateTime exitTime,int price,Boolean isHoliday) {
+        public Visitor(string ticketID, string name, int age,Boolean isGroup,int groupOf,string entryTime, string exitTime,int price,Boolean isHoliday) {
             this.ticketID = ticketID;
             this.name = name;
             this.age = age;
