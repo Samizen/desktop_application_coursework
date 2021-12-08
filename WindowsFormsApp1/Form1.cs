@@ -27,16 +27,16 @@ namespace WindowsFormsApp1
         private void btnSave_Click(object sender, EventArgs e)
         {
             visitor.ticketID = textBoxTicketId.Text;
-            visitor.ticketName = textBoxName.Text;
-            visitor.groupNoOfPeople = comboBoxGroup.SelectedIndex;
-            visitor.entryTime = dateTimePickerEntryTime.Value;
-            visitor.exitTime = dateTimePickerExitTime.Value;
+            visitor.name = textBoxName.Text;
             visitor.age = int.Parse(textBoxAge.Text);
+            visitor.isGroup = checkboxIsGroup.Checked;
+            if (comboBoxGroupOf.SelectedItem != null)
+            {
+                visitor.groupOf = int.Parse(comboBoxGroupOf.SelectedItem.ToString());
+            }
+            visitor.entryTime = DateTime.Now;
+            visitor.exitTime = dateTimePickerExitTime.Value;
         }
 
-        private void comboBoxGroup_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
