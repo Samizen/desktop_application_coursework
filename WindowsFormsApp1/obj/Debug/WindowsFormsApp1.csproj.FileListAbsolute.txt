@@ -21,3 +21,4 @@ F:\Application_CW\application_cw-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp
 F:\Application_CW\application_cw-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 F:\Application_CW\application_cw-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 F:\Application_CW\application_cw-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\Application_CW\application_cw-main\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources

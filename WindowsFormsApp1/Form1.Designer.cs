@@ -65,6 +65,7 @@ namespace WindowsFormsApp1
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.checkBoxIsHoliday = new System.Windows.Forms.CheckBox();
+            this.labelTextNameValidation = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVisitor)).BeginInit();
             this.SuspendLayout();
@@ -416,11 +417,22 @@ namespace WindowsFormsApp1
             this.checkBoxIsHoliday.Text = "Is Holiday?";
             this.checkBoxIsHoliday.UseVisualStyleBackColor = true;
             // 
+            // labelTextNameValidation
+            // 
+            this.labelTextNameValidation.AutoSize = true;
+            this.labelTextNameValidation.ForeColor = System.Drawing.Color.Red;
+            this.labelTextNameValidation.Location = new System.Drawing.Point(54, 72);
+            this.labelTextNameValidation.Name = "labelTextNameValidation";
+            this.labelTextNameValidation.Size = new System.Drawing.Size(35, 13);
+            this.labelTextNameValidation.TabIndex = 30;
+            this.labelTextNameValidation.Text = "label9";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 506);
+            this.Controls.Add(this.labelTextNameValidation);
             this.Controls.Add(this.checkBoxIsHoliday);
             this.Controls.Add(this.buttonShowData);
             this.Controls.Add(this.dataGridVisitor);
@@ -492,6 +504,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.CheckBox checkBoxIsHoliday;
+        private System.Windows.Forms.Label labelTextNameValidation;
     }
 }
 

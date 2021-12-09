@@ -39,6 +39,8 @@ namespace WindowsFormsApp1
             saveFileDialog1.ShowDialog();
             string textFilePath = saveFileDialog1.FileName;
 
+            ValidationTextBox(textBoxTicketId, labelTextNameValidation);
+
             WriteToCsv(textFilePath, visitor.ticketID, visitor.name, visitor.age, visitor.isGroup, visitor.groupOf
                 , visitor.entryTime, visitor.exitTime, visitor.price, visitor.isHoliday);
         }
@@ -98,6 +100,20 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Error Occured in entering data, Please Check", "Try Again",
                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void Validation()
+        {
+
+        }
+
+        void ValidationTextBox(TextBox t, Label l)
+        {
+            string content = t.Text;
+            if (t == null)
+            {
+                l.Text = "Please enter correct value!";
             }
         }
     }
