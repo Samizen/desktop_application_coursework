@@ -30,13 +30,11 @@ namespace WindowsFormsApp1
             visitor.ticketID = textBoxTicketId.Text;
             visitor.name = textBoxName.Text;
             visitor.age = int.Parse(textBoxAge.Text);
-            visitor.isGroup = checkboxIsGroup.Checked;
-            if (comboBoxGroupOf.SelectedItem != null)
-            {
-                visitor.groupOf = int.Parse(comboBoxGroupOf.SelectedItem.ToString());
-            }
+            visitor.isGroup = checkboxIsGroup.Checked.ToString();
+            visitor.groupOf = int.Parse(comboBoxGroupOf.SelectedItem.ToString());            
             visitor.entryTime = DateTime.Now.ToString("hh:mm tt");
             visitor.exitTime = DateTime.Now.ToString("hh:mm tt");
+            visitor.isHoliday = checkBoxIsHoliday.Checked.ToString();
 
             saveFileDialog1.ShowDialog();
             string textFilePath = saveFileDialog1.FileName;
@@ -45,47 +43,47 @@ namespace WindowsFormsApp1
                 , visitor.entryTime, visitor.exitTime, visitor.price, visitor.isHoliday);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonShowData_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             string textFilePath = openFileDialog1.FileName;
-            ReadCSV(textFilePath);
+            dataGridVisitor.DataSource = ReadCSV(textFilePath);
         }
 
         DataTable dt = new DataTable();
 
-        private void ReadCSV(string filePath)
+        List<Visitor> ReadCSV(string filePath)
         {
-            DataTable dt = new DataTable();
-            string[] lines = System.IO.File.ReadAllLines(filePath);
-            if (lines.Length > 0)
+            
+            try
             {
-                string firstLine = lines[0];
-                string[] headerLabels = firstLine.Split(',');
-                foreach (string headerWord in headerLabels)
+                var visitor_data = from l in File.ReadAllLines(filePath)
+                let data = l.Split(',')
+                select new Visitor
                 {
-                    dt.Columns.Add(new DataColumn(headerWord));
-                }
-                for (int r = 1; r < lines.Length; r++)
-                {
-                    string[] dataWords = lines[r].Split(',');
-                    DataRow dr = dt.NewRow();
-                    int columnIndex = 0;
-                    foreach (string headerWord in headerLabels)
-                    {
-                        dr[headerWord] = dataWords[columnIndex++];
-                        dt.Rows.Add(dr);
-                    }
-                }
-                if (dt.Rows.Count > 0)
-                {
-                    dataGridVisitor.DataSource = dt;
-                }
+                    ticketID = data[0],
+                    name = data[1],
+                    age = int.Parse(data[2]),
+                    isGroup = (data[3]),
+                    groupOf = int.Parse(data[4]),
+                    entryTime = data[5],
+                    exitTime = data[6],
+                    price = int.Parse(data[7]),
+                    isHoliday = (data[8])
+                };
+
+                return visitor_data.ToList();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+                        
         }
 
-        public void WriteToCsv(string filePath, string ticketID, string name, int age, Boolean isGroup,
-            int groupOf, string entryTime, string exitTime, int price, Boolean isHoliday)
+        public void WriteToCsv(string filePath, string ticketID, string name, int age, string isGroup,
+            int groupOf, string entryTime, string exitTime, int price, string isHoliday)
         {
             try
             {

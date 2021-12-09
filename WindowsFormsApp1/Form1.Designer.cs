@@ -61,9 +61,10 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridVisitor = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonShowData = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.checkBoxIsHoliday = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVisitor)).BeginInit();
             this.SuspendLayout();
@@ -389,27 +390,39 @@ namespace WindowsFormsApp1
             this.dataGridVisitor.Size = new System.Drawing.Size(700, 150);
             this.dataGridVisitor.TabIndex = 27;
             // 
-            // button1
+            // buttonShowData
             // 
-            this.button1.Location = new System.Drawing.Point(389, 263);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Show Data";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonShowData.Location = new System.Drawing.Point(389, 263);
+            this.buttonShowData.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonShowData.Name = "buttonShowData";
+            this.buttonShowData.Size = new System.Drawing.Size(75, 29);
+            this.buttonShowData.TabIndex = 28;
+            this.buttonShowData.Text = "Show Data";
+            this.buttonShowData.UseVisualStyleBackColor = true;
+            this.buttonShowData.Click += new System.EventHandler(this.buttonShowData_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // checkBoxIsHoliday
+            // 
+            this.checkBoxIsHoliday.AutoSize = true;
+            this.checkBoxIsHoliday.Location = new System.Drawing.Point(56, 245);
+            this.checkBoxIsHoliday.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxIsHoliday.Name = "checkBoxIsHoliday";
+            this.checkBoxIsHoliday.Size = new System.Drawing.Size(78, 17);
+            this.checkBoxIsHoliday.TabIndex = 29;
+            this.checkBoxIsHoliday.Text = "Is Holiday?";
+            this.checkBoxIsHoliday.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 506);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkBoxIsHoliday);
+            this.Controls.Add(this.buttonShowData);
             this.Controls.Add(this.dataGridVisitor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
@@ -475,9 +488,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridVisitor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonShowData;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.CheckBox checkBoxIsHoliday;
     }
 }
 
