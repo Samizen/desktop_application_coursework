@@ -18,31 +18,31 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         Visitor visitor = new Visitor();
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            visitor.ticketID = textBoxTicketId.Text;
-            visitor.name = textBoxName.Text;
-            visitor.age = int.Parse(textBoxAge.Text);
-            visitor.isGroup = checkboxIsGroup.Checked.ToString();
-            visitor.groupOf = int.Parse(comboBoxGroupOf.SelectedItem.ToString());            
-            visitor.entryTime = DateTime.Now.ToString("hh:mm tt");
-            visitor.exitTime = DateTime.Now.ToString("hh:mm tt");
-            visitor.isHoliday = checkBoxIsHoliday.Checked.ToString();
+            try
+            {
+                visitor.ticketID = textBoxTicketId.Text;
+                visitor.name = textBoxName.Text;
+                visitor.age = int.Parse(textBoxAge.Text);
+                visitor.isGroup = checkboxIsGroup.Checked.ToString();
+                visitor.groupOf = int.Parse(comboBoxGroupOf.SelectedItem.ToString());
+                visitor.entryTime = DateTime.Now.ToString("hh:mm tt");
+                visitor.exitTime = DateTime.Now.ToString("hh:mm tt");
+                visitor.isHoliday = checkBoxIsHoliday.Checked.ToString();
 
-            saveFileDialog1.ShowDialog();
-            string textFilePath = saveFileDialog1.FileName;
+                saveFileDialog1.ShowDialog();
+                string textFilePath = saveFileDialog1.FileName;
 
-            ValidationTextBox(textBoxTicketId, labelTextNameValidation);
-
-            WriteToCsv(textFilePath, visitor.ticketID, visitor.name, visitor.age, visitor.isGroup, visitor.groupOf
-                , visitor.entryTime, visitor.exitTime, visitor.price, visitor.isHoliday);
+                WriteToCsv(textFilePath, visitor.ticketID, visitor.name, visitor.age, visitor.isGroup, visitor.groupOf
+                    , visitor.entryTime, visitor.exitTime, visitor.price, visitor.isHoliday);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonShowData_Click(object sender, EventArgs e)
@@ -100,20 +100,6 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Error Occured in entering data, Please Check", "Try Again",
                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        void Validation()
-        {
-
-        }
-
-        void ValidationTextBox(TextBox t, Label l)
-        {
-            string content = t.Text;
-            if (t == null)
-            {
-                l.Text = "Please enter correct value!";
             }
         }
     }

@@ -30,160 +30,147 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.labelHolidayDiscount = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxHolidayDiscount = new System.Windows.Forms.TextBox();
+            this.labelTicketRate = new System.Windows.Forms.Label();
+            this.label1Hr = new System.Windows.Forms.Label();
+            this.label2Hrs = new System.Windows.Forms.Label();
+            this.label3Hrs = new System.Windows.Forms.Label();
+            this.label4Hrs = new System.Windows.Forms.Label();
+            this.labelWholeDay = new System.Windows.Forms.Label();
+            this.labelChild = new System.Windows.Forms.Label();
+            this.labelAdult = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxChild1Hr = new System.Windows.Forms.TextBox();
+            this.textBoxChild2Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxChild3Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxChild4Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxChildWholeDay = new System.Windows.Forms.TextBox();
+            this.textBoxAdultWholeDay = new System.Windows.Forms.TextBox();
+            this.textBoxAdult4Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxAdult3Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxAdult2Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxAdult1Hr = new System.Windows.Forms.TextBox();
+            this.textBoxGroup5WholeDay = new System.Windows.Forms.TextBox();
+            this.textBoxGroup54Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup53Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup52Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup51Hr = new System.Windows.Forms.TextBox();
+            this.textBoxGroup10WholeDay = new System.Windows.Forms.TextBox();
+            this.textBoxGroup104Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup103Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup102Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup101Hr = new System.Windows.Forms.TextBox();
+            this.textBoxGroup15WholeDay = new System.Windows.Forms.TextBox();
+            this.textBoxGroup154Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup153Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup152Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup151Hr = new System.Windows.Forms.TextBox();
+            this.textBoxGroup20WholeDay = new System.Windows.Forms.TextBox();
+            this.textBoxGroup204Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup203Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup202Hrs = new System.Windows.Forms.TextBox();
+            this.textBoxGroup201Hr = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonImport = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // labelHolidayDiscount
             // 
             this.labelHolidayDiscount.AutoSize = true;
-            this.labelHolidayDiscount.Location = new System.Drawing.Point(370, 23);
+            this.labelHolidayDiscount.Location = new System.Drawing.Point(303, 25);
             this.labelHolidayDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHolidayDiscount.Name = "labelHolidayDiscount";
             this.labelHolidayDiscount.Size = new System.Drawing.Size(87, 13);
             this.labelHolidayDiscount.TabIndex = 1;
             this.labelHolidayDiscount.Text = "Holiday Discount";
             // 
-            // textBox1
+            // textBoxHolidayDiscount
             // 
-            this.textBox1.Location = new System.Drawing.Point(461, 20);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(55, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBoxHolidayDiscount.Location = new System.Drawing.Point(394, 22);
+            this.textBoxHolidayDiscount.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxHolidayDiscount.Name = "textBoxHolidayDiscount";
+            this.textBoxHolidayDiscount.Size = new System.Drawing.Size(55, 20);
+            this.textBoxHolidayDiscount.TabIndex = 2;
+            this.textBoxHolidayDiscount.Text = "2.5";
             // 
-            // label1
+            // labelTicketRate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Ticket Rate";
+            this.labelTicketRate.AutoSize = true;
+            this.labelTicketRate.Location = new System.Drawing.Point(44, 65);
+            this.labelTicketRate.Name = "labelTicketRate";
+            this.labelTicketRate.Size = new System.Drawing.Size(63, 13);
+            this.labelTicketRate.TabIndex = 3;
+            this.labelTicketRate.Text = "Ticket Rate";
             // 
-            // label2
+            // label1Hr
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "1Hr";
+            this.label1Hr.AutoSize = true;
+            this.label1Hr.Location = new System.Drawing.Point(128, 65);
+            this.label1Hr.Name = "label1Hr";
+            this.label1Hr.Size = new System.Drawing.Size(24, 13);
+            this.label1Hr.TabIndex = 4;
+            this.label1Hr.Text = "1Hr";
             // 
-            // label3
+            // label2Hrs
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(203, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "2Hrs";
+            this.label2Hrs.AutoSize = true;
+            this.label2Hrs.Location = new System.Drawing.Point(194, 65);
+            this.label2Hrs.Name = "label2Hrs";
+            this.label2Hrs.Size = new System.Drawing.Size(29, 13);
+            this.label2Hrs.TabIndex = 5;
+            this.label2Hrs.Text = "2Hrs";
             // 
-            // label4
+            // label3Hrs
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(266, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "3Hrs";
+            this.label3Hrs.AutoSize = true;
+            this.label3Hrs.Location = new System.Drawing.Point(264, 65);
+            this.label3Hrs.Name = "label3Hrs";
+            this.label3Hrs.Size = new System.Drawing.Size(29, 13);
+            this.label3Hrs.TabIndex = 6;
+            this.label3Hrs.Text = "3Hrs";
             // 
-            // label5
+            // label4Hrs
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(336, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "4Hrs";
+            this.label4Hrs.AutoSize = true;
+            this.label4Hrs.Location = new System.Drawing.Point(333, 65);
+            this.label4Hrs.Name = "label4Hrs";
+            this.label4Hrs.Size = new System.Drawing.Size(29, 13);
+            this.label4Hrs.TabIndex = 7;
+            this.label4Hrs.Text = "4Hrs";
             // 
-            // label6
+            // labelWholeDay
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(409, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "5Hrs";
+            this.labelWholeDay.AutoSize = true;
+            this.labelWholeDay.Location = new System.Drawing.Point(391, 65);
+            this.labelWholeDay.Name = "labelWholeDay";
+            this.labelWholeDay.Size = new System.Drawing.Size(60, 13);
+            this.labelWholeDay.TabIndex = 8;
+            this.labelWholeDay.Text = "Whole Day";
             // 
-            // label7
+            // labelChild
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(470, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "6+Hrs";
+            this.labelChild.AutoSize = true;
+            this.labelChild.Location = new System.Drawing.Point(35, 94);
+            this.labelChild.Name = "labelChild";
+            this.labelChild.Size = new System.Drawing.Size(72, 13);
+            this.labelChild.TabIndex = 10;
+            this.labelChild.Text = "Child(<12 Yrs)";
             // 
-            // label8
+            // labelAdult
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 94);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Child(<12 Yrs)";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(34, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Adult(>12 Yrs)";
+            this.labelAdult.AutoSize = true;
+            this.labelAdult.Location = new System.Drawing.Point(34, 130);
+            this.labelAdult.Name = "labelAdult";
+            this.labelAdult.Size = new System.Drawing.Size(73, 13);
+            this.labelAdult.TabIndex = 11;
+            this.labelAdult.Text = "Adult(>12 Yrs)";
             // 
             // label10
             // 
@@ -231,303 +218,285 @@ namespace WindowsFormsApp1
             this.label14.TabIndex = 16;
             this.label14.Text = "Group of 20";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(117, 90);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(55, 20);
-            this.textBox2.TabIndex = 17;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(186, 90);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(55, 20);
-            this.textBox3.TabIndex = 18;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(254, 90);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(55, 20);
-            this.textBox4.TabIndex = 19;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(322, 90);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(55, 20);
-            this.textBox5.TabIndex = 20;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(393, 90);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(55, 20);
-            this.textBox6.TabIndex = 21;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(461, 91);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(55, 20);
-            this.textBox7.TabIndex = 22;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(461, 124);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(55, 20);
-            this.textBox8.TabIndex = 28;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(393, 123);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(55, 20);
-            this.textBox9.TabIndex = 27;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(322, 123);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(55, 20);
-            this.textBox10.TabIndex = 26;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(254, 123);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(55, 20);
-            this.textBox11.TabIndex = 25;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(186, 123);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(55, 20);
-            this.textBox12.TabIndex = 24;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(117, 123);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(55, 20);
-            this.textBox13.TabIndex = 23;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(462, 196);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(55, 20);
-            this.textBox14.TabIndex = 34;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(394, 195);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(55, 20);
-            this.textBox15.TabIndex = 33;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(323, 195);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(55, 20);
-            this.textBox16.TabIndex = 32;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(255, 195);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(55, 20);
-            this.textBox17.TabIndex = 31;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(187, 195);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(55, 20);
-            this.textBox18.TabIndex = 30;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(118, 195);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(55, 20);
-            this.textBox19.TabIndex = 29;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(461, 226);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(55, 20);
-            this.textBox20.TabIndex = 40;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(393, 225);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(55, 20);
-            this.textBox21.TabIndex = 39;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(322, 225);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(55, 20);
-            this.textBox22.TabIndex = 38;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(254, 225);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(55, 20);
-            this.textBox23.TabIndex = 37;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(186, 225);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(55, 20);
-            this.textBox24.TabIndex = 36;
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(117, 225);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(55, 20);
-            this.textBox25.TabIndex = 35;
-            // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(462, 258);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(55, 20);
-            this.textBox26.TabIndex = 46;
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(394, 257);
-            this.textBox27.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(55, 20);
-            this.textBox27.TabIndex = 45;
-            // 
-            // textBox28
-            // 
-            this.textBox28.Location = new System.Drawing.Point(323, 257);
-            this.textBox28.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(55, 20);
-            this.textBox28.TabIndex = 44;
-            // 
-            // textBox29
-            // 
-            this.textBox29.Location = new System.Drawing.Point(255, 257);
-            this.textBox29.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(55, 20);
-            this.textBox29.TabIndex = 43;
-            // 
-            // textBox30
-            // 
-            this.textBox30.Location = new System.Drawing.Point(187, 257);
-            this.textBox30.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(55, 20);
-            this.textBox30.TabIndex = 42;
-            // 
-            // textBox31
-            // 
-            this.textBox31.Location = new System.Drawing.Point(118, 257);
-            this.textBox31.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(55, 20);
-            this.textBox31.TabIndex = 41;
-            // 
-            // textBox32
-            // 
-            this.textBox32.Location = new System.Drawing.Point(462, 290);
-            this.textBox32.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(55, 20);
-            this.textBox32.TabIndex = 52;
-            // 
-            // textBox33
-            // 
-            this.textBox33.Location = new System.Drawing.Point(394, 289);
-            this.textBox33.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(55, 20);
-            this.textBox33.TabIndex = 51;
-            // 
-            // textBox34
-            // 
-            this.textBox34.Location = new System.Drawing.Point(323, 289);
-            this.textBox34.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(55, 20);
-            this.textBox34.TabIndex = 50;
-            // 
-            // textBox35
-            // 
-            this.textBox35.Location = new System.Drawing.Point(255, 289);
-            this.textBox35.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(55, 20);
-            this.textBox35.TabIndex = 49;
-            // 
-            // textBox36
-            // 
-            this.textBox36.Location = new System.Drawing.Point(187, 289);
-            this.textBox36.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(55, 20);
-            this.textBox36.TabIndex = 48;
-            // 
-            // textBox37
-            // 
-            this.textBox37.Location = new System.Drawing.Point(118, 289);
-            this.textBox37.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(55, 20);
-            this.textBox37.TabIndex = 47;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(197, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            // textBoxChild1Hr
+            // 
+            this.textBoxChild1Hr.Location = new System.Drawing.Point(117, 90);
+            this.textBoxChild1Hr.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChild1Hr.Name = "textBoxChild1Hr";
+            this.textBoxChild1Hr.Size = new System.Drawing.Size(55, 20);
+            this.textBoxChild1Hr.TabIndex = 17;
+            this.textBoxChild1Hr.Text = "400";
+            // 
+            // textBoxChild2Hrs
+            // 
+            this.textBoxChild2Hrs.Location = new System.Drawing.Point(186, 90);
+            this.textBoxChild2Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChild2Hrs.Name = "textBoxChild2Hrs";
+            this.textBoxChild2Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxChild2Hrs.TabIndex = 18;
+            this.textBoxChild2Hrs.Text = "700";
+            // 
+            // textBoxChild3Hrs
+            // 
+            this.textBoxChild3Hrs.Location = new System.Drawing.Point(254, 90);
+            this.textBoxChild3Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChild3Hrs.Name = "textBoxChild3Hrs";
+            this.textBoxChild3Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxChild3Hrs.TabIndex = 19;
+            this.textBoxChild3Hrs.Text = "1050";
+            // 
+            // textBoxChild4Hrs
+            // 
+            this.textBoxChild4Hrs.Location = new System.Drawing.Point(322, 90);
+            this.textBoxChild4Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChild4Hrs.Name = "textBoxChild4Hrs";
+            this.textBoxChild4Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxChild4Hrs.TabIndex = 20;
+            this.textBoxChild4Hrs.Text = "1450";
+            // 
+            // textBoxChildWholeDay
+            // 
+            this.textBoxChildWholeDay.Location = new System.Drawing.Point(393, 90);
+            this.textBoxChildWholeDay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChildWholeDay.Name = "textBoxChildWholeDay";
+            this.textBoxChildWholeDay.Size = new System.Drawing.Size(55, 20);
+            this.textBoxChildWholeDay.TabIndex = 21;
+            this.textBoxChildWholeDay.Text = "2200";
+            // 
+            // textBoxAdultWholeDay
+            // 
+            this.textBoxAdultWholeDay.Location = new System.Drawing.Point(393, 123);
+            this.textBoxAdultWholeDay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAdultWholeDay.Name = "textBoxAdultWholeDay";
+            this.textBoxAdultWholeDay.Size = new System.Drawing.Size(55, 20);
+            this.textBoxAdultWholeDay.TabIndex = 27;
+            this.textBoxAdultWholeDay.Text = "2700";
+            // 
+            // textBoxAdult4Hrs
+            // 
+            this.textBoxAdult4Hrs.Location = new System.Drawing.Point(322, 123);
+            this.textBoxAdult4Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAdult4Hrs.Name = "textBoxAdult4Hrs";
+            this.textBoxAdult4Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxAdult4Hrs.TabIndex = 26;
+            this.textBoxAdult4Hrs.Text = "2100";
+            // 
+            // textBoxAdult3Hrs
+            // 
+            this.textBoxAdult3Hrs.Location = new System.Drawing.Point(254, 123);
+            this.textBoxAdult3Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAdult3Hrs.Name = "textBoxAdult3Hrs";
+            this.textBoxAdult3Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxAdult3Hrs.TabIndex = 25;
+            this.textBoxAdult3Hrs.Text = "1500";
+            // 
+            // textBoxAdult2Hrs
+            // 
+            this.textBoxAdult2Hrs.Location = new System.Drawing.Point(186, 123);
+            this.textBoxAdult2Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAdult2Hrs.Name = "textBoxAdult2Hrs";
+            this.textBoxAdult2Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxAdult2Hrs.TabIndex = 24;
+            this.textBoxAdult2Hrs.Text = "1000";
+            // 
+            // textBoxAdult1Hr
+            // 
+            this.textBoxAdult1Hr.Location = new System.Drawing.Point(117, 123);
+            this.textBoxAdult1Hr.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAdult1Hr.Name = "textBoxAdult1Hr";
+            this.textBoxAdult1Hr.Size = new System.Drawing.Size(55, 20);
+            this.textBoxAdult1Hr.TabIndex = 23;
+            this.textBoxAdult1Hr.Text = "550";
+            // 
+            // textBoxGroup5WholeDay
+            // 
+            this.textBoxGroup5WholeDay.Location = new System.Drawing.Point(394, 195);
+            this.textBoxGroup5WholeDay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup5WholeDay.Name = "textBoxGroup5WholeDay";
+            this.textBoxGroup5WholeDay.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup5WholeDay.TabIndex = 33;
+            this.textBoxGroup5WholeDay.Text = "10000";
+            // 
+            // textBoxGroup54Hrs
+            // 
+            this.textBoxGroup54Hrs.Location = new System.Drawing.Point(323, 195);
+            this.textBoxGroup54Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup54Hrs.Name = "textBoxGroup54Hrs";
+            this.textBoxGroup54Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup54Hrs.TabIndex = 32;
+            this.textBoxGroup54Hrs.Text = "7100";
+            // 
+            // textBoxGroup53Hrs
+            // 
+            this.textBoxGroup53Hrs.Location = new System.Drawing.Point(255, 195);
+            this.textBoxGroup53Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup53Hrs.Name = "textBoxGroup53Hrs";
+            this.textBoxGroup53Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup53Hrs.TabIndex = 31;
+            this.textBoxGroup53Hrs.Text = "5150";
+            // 
+            // textBoxGroup52Hrs
+            // 
+            this.textBoxGroup52Hrs.Location = new System.Drawing.Point(187, 195);
+            this.textBoxGroup52Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup52Hrs.Name = "textBoxGroup52Hrs";
+            this.textBoxGroup52Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup52Hrs.TabIndex = 30;
+            this.textBoxGroup52Hrs.Text = "3400";
+            // 
+            // textBoxGroup51Hr
+            // 
+            this.textBoxGroup51Hr.Location = new System.Drawing.Point(118, 195);
+            this.textBoxGroup51Hr.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup51Hr.Name = "textBoxGroup51Hr";
+            this.textBoxGroup51Hr.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup51Hr.TabIndex = 29;
+            this.textBoxGroup51Hr.Text = "1900";
+            // 
+            // textBoxGroup10WholeDay
+            // 
+            this.textBoxGroup10WholeDay.Location = new System.Drawing.Point(393, 225);
+            this.textBoxGroup10WholeDay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup10WholeDay.Name = "textBoxGroup10WholeDay";
+            this.textBoxGroup10WholeDay.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup10WholeDay.TabIndex = 39;
+            this.textBoxGroup10WholeDay.Text = "21000";
+            // 
+            // textBoxGroup104Hrs
+            // 
+            this.textBoxGroup104Hrs.Location = new System.Drawing.Point(322, 225);
+            this.textBoxGroup104Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup104Hrs.Name = "textBoxGroup104Hrs";
+            this.textBoxGroup104Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup104Hrs.TabIndex = 38;
+            this.textBoxGroup104Hrs.Text = "14000";
+            // 
+            // textBoxGroup103Hrs
+            // 
+            this.textBoxGroup103Hrs.Location = new System.Drawing.Point(254, 225);
+            this.textBoxGroup103Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup103Hrs.Name = "textBoxGroup103Hrs";
+            this.textBoxGroup103Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup103Hrs.TabIndex = 37;
+            this.textBoxGroup103Hrs.Text = "10250";
+            // 
+            // textBoxGroup102Hrs
+            // 
+            this.textBoxGroup102Hrs.Location = new System.Drawing.Point(186, 225);
+            this.textBoxGroup102Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup102Hrs.Name = "textBoxGroup102Hrs";
+            this.textBoxGroup102Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup102Hrs.TabIndex = 36;
+            this.textBoxGroup102Hrs.Text = "6750";
+            // 
+            // textBoxGroup101Hr
+            // 
+            this.textBoxGroup101Hr.Location = new System.Drawing.Point(117, 225);
+            this.textBoxGroup101Hr.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup101Hr.Name = "textBoxGroup101Hr";
+            this.textBoxGroup101Hr.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup101Hr.TabIndex = 35;
+            this.textBoxGroup101Hr.Text = "3750";
+            // 
+            // textBoxGroup15WholeDay
+            // 
+            this.textBoxGroup15WholeDay.Location = new System.Drawing.Point(394, 257);
+            this.textBoxGroup15WholeDay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup15WholeDay.Name = "textBoxGroup15WholeDay";
+            this.textBoxGroup15WholeDay.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup15WholeDay.TabIndex = 45;
+            this.textBoxGroup15WholeDay.Text = "30000";
+            // 
+            // textBoxGroup154Hrs
+            // 
+            this.textBoxGroup154Hrs.Location = new System.Drawing.Point(323, 257);
+            this.textBoxGroup154Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup154Hrs.Name = "textBoxGroup154Hrs";
+            this.textBoxGroup154Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup154Hrs.TabIndex = 44;
+            this.textBoxGroup154Hrs.Text = "21000";
+            // 
+            // textBoxGroup153Hrs
+            // 
+            this.textBoxGroup153Hrs.Location = new System.Drawing.Point(255, 257);
+            this.textBoxGroup153Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup153Hrs.Name = "textBoxGroup153Hrs";
+            this.textBoxGroup153Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup153Hrs.TabIndex = 43;
+            this.textBoxGroup153Hrs.Text = "15250";
+            // 
+            // textBoxGroup152Hrs
+            // 
+            this.textBoxGroup152Hrs.Location = new System.Drawing.Point(187, 257);
+            this.textBoxGroup152Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup152Hrs.Name = "textBoxGroup152Hrs";
+            this.textBoxGroup152Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup152Hrs.TabIndex = 42;
+            this.textBoxGroup152Hrs.Text = "10050";
+            // 
+            // textBoxGroup151Hr
+            // 
+            this.textBoxGroup151Hr.Location = new System.Drawing.Point(118, 257);
+            this.textBoxGroup151Hr.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup151Hr.Name = "textBoxGroup151Hr";
+            this.textBoxGroup151Hr.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup151Hr.TabIndex = 41;
+            this.textBoxGroup151Hr.Text = "5550";
+            // 
+            // textBoxGroup20WholeDay
+            // 
+            this.textBoxGroup20WholeDay.Location = new System.Drawing.Point(394, 289);
+            this.textBoxGroup20WholeDay.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup20WholeDay.Name = "textBoxGroup20WholeDay";
+            this.textBoxGroup20WholeDay.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup20WholeDay.TabIndex = 51;
+            this.textBoxGroup20WholeDay.Text = "40000";
+            // 
+            // textBoxGroup204Hrs
+            // 
+            this.textBoxGroup204Hrs.Location = new System.Drawing.Point(323, 289);
+            this.textBoxGroup204Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup204Hrs.Name = "textBoxGroup204Hrs";
+            this.textBoxGroup204Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup204Hrs.TabIndex = 50;
+            this.textBoxGroup204Hrs.Text = "26000";
+            // 
+            // textBoxGroup203Hrs
+            // 
+            this.textBoxGroup203Hrs.Location = new System.Drawing.Point(255, 289);
+            this.textBoxGroup203Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup203Hrs.Name = "textBoxGroup203Hrs";
+            this.textBoxGroup203Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup203Hrs.TabIndex = 49;
+            this.textBoxGroup203Hrs.Text = "20000";
+            // 
+            // textBoxGroup202Hrs
+            // 
+            this.textBoxGroup202Hrs.Location = new System.Drawing.Point(187, 289);
+            this.textBoxGroup202Hrs.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup202Hrs.Name = "textBoxGroup202Hrs";
+            this.textBoxGroup202Hrs.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup202Hrs.TabIndex = 48;
+            this.textBoxGroup202Hrs.Text = "13000";
+            // 
+            // textBoxGroup201Hr
+            // 
+            this.textBoxGroup201Hr.Location = new System.Drawing.Point(118, 289);
+            this.textBoxGroup201Hr.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxGroup201Hr.Name = "textBoxGroup201Hr";
+            this.textBoxGroup201Hr.Size = new System.Drawing.Size(55, 20);
+            this.textBoxGroup201Hr.TabIndex = 47;
+            this.textBoxGroup201Hr.Text = "7400";
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(197, 335);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 53;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // label15
             // 
@@ -539,76 +508,74 @@ namespace WindowsFormsApp1
             this.label15.TabIndex = 54;
             this.label15.Text = "Ticket Rate Entry";
             // 
-            // button2
+            // buttonImport
             // 
-            this.button2.Location = new System.Drawing.Point(278, 335);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 55;
-            this.button2.Text = "Import";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonImport.Location = new System.Drawing.Point(278, 335);
+            this.buttonImport.Name = "buttonImport";
+            this.buttonImport.Size = new System.Drawing.Size(75, 23);
+            this.buttonImport.TabIndex = 55;
+            this.buttonImport.Text = "Import";
+            this.buttonImport.UseVisualStyleBackColor = true;
+            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 370);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonImport);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox32);
-            this.Controls.Add(this.textBox33);
-            this.Controls.Add(this.textBox34);
-            this.Controls.Add(this.textBox35);
-            this.Controls.Add(this.textBox36);
-            this.Controls.Add(this.textBox37);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.textBox31);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.textBoxGroup20WholeDay);
+            this.Controls.Add(this.textBoxGroup204Hrs);
+            this.Controls.Add(this.textBoxGroup203Hrs);
+            this.Controls.Add(this.textBoxGroup202Hrs);
+            this.Controls.Add(this.textBoxGroup201Hr);
+            this.Controls.Add(this.textBoxGroup15WholeDay);
+            this.Controls.Add(this.textBoxGroup154Hrs);
+            this.Controls.Add(this.textBoxGroup153Hrs);
+            this.Controls.Add(this.textBoxGroup152Hrs);
+            this.Controls.Add(this.textBoxGroup151Hr);
+            this.Controls.Add(this.textBoxGroup10WholeDay);
+            this.Controls.Add(this.textBoxGroup104Hrs);
+            this.Controls.Add(this.textBoxGroup103Hrs);
+            this.Controls.Add(this.textBoxGroup102Hrs);
+            this.Controls.Add(this.textBoxGroup101Hr);
+            this.Controls.Add(this.textBoxGroup5WholeDay);
+            this.Controls.Add(this.textBoxGroup54Hrs);
+            this.Controls.Add(this.textBoxGroup53Hrs);
+            this.Controls.Add(this.textBoxGroup52Hrs);
+            this.Controls.Add(this.textBoxGroup51Hr);
+            this.Controls.Add(this.textBoxAdultWholeDay);
+            this.Controls.Add(this.textBoxAdult4Hrs);
+            this.Controls.Add(this.textBoxAdult3Hrs);
+            this.Controls.Add(this.textBoxAdult2Hrs);
+            this.Controls.Add(this.textBoxAdult1Hr);
+            this.Controls.Add(this.textBoxChildWholeDay);
+            this.Controls.Add(this.textBoxChild4Hrs);
+            this.Controls.Add(this.textBoxChild3Hrs);
+            this.Controls.Add(this.textBoxChild2Hrs);
+            this.Controls.Add(this.textBoxChild1Hr);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelAdult);
+            this.Controls.Add(this.labelChild);
+            this.Controls.Add(this.labelWholeDay);
+            this.Controls.Add(this.label4Hrs);
+            this.Controls.Add(this.label3Hrs);
+            this.Controls.Add(this.label2Hrs);
+            this.Controls.Add(this.label1Hr);
+            this.Controls.Add(this.labelTicketRate);
+            this.Controls.Add(this.textBoxHolidayDiscount);
             this.Controls.Add(this.labelHolidayDiscount);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -618,59 +585,54 @@ namespace WindowsFormsApp1
 
         #endregion
         private System.Windows.Forms.Label labelHolidayDiscount;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxHolidayDiscount;
+        private System.Windows.Forms.Label labelTicketRate;
+        private System.Windows.Forms.Label label1Hr;
+        private System.Windows.Forms.Label label2Hrs;
+        private System.Windows.Forms.Label label3Hrs;
+        private System.Windows.Forms.Label label4Hrs;
+        private System.Windows.Forms.Label labelWholeDay;
+        private System.Windows.Forms.Label labelChild;
+        private System.Windows.Forms.Label labelAdult;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxChild1Hr;
+        private System.Windows.Forms.TextBox textBoxChild2Hrs;
+        private System.Windows.Forms.TextBox textBoxChild3Hrs;
+        private System.Windows.Forms.TextBox textBoxChild4Hrs;
+        private System.Windows.Forms.TextBox textBoxChildWholeDay;
+        private System.Windows.Forms.TextBox textBoxAdultWholeDay;
+        private System.Windows.Forms.TextBox textBoxAdult4Hrs;
+        private System.Windows.Forms.TextBox textBoxAdult3Hrs;
+        private System.Windows.Forms.TextBox textBoxAdult2Hrs;
+        private System.Windows.Forms.TextBox textBoxAdult1Hr;
+        private System.Windows.Forms.TextBox textBoxGroup5WholeDay;
+        private System.Windows.Forms.TextBox textBoxGroup54Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup53Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup52Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup51Hr;
+        private System.Windows.Forms.TextBox textBoxGroup10WholeDay;
+        private System.Windows.Forms.TextBox textBoxGroup104Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup103Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup102Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup101Hr;
+        private System.Windows.Forms.TextBox textBoxGroup15WholeDay;
+        private System.Windows.Forms.TextBox textBoxGroup154Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup153Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup152Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup151Hr;
+        private System.Windows.Forms.TextBox textBoxGroup20WholeDay;
+        private System.Windows.Forms.TextBox textBoxGroup204Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup203Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup202Hrs;
+        private System.Windows.Forms.TextBox textBoxGroup201Hr;
+        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonImport;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
