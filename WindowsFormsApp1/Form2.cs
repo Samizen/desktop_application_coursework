@@ -18,7 +18,52 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        //TicketPrices ticketPrices = new TicketPrices(400, 700, 1050, 1450, 2200,
+        //    550, 1000, 1500, 2100, 2700,
+        //    380, 670, 1010, 1400, 2100, 
+        //    370, 660, 1000, 1390, 2090,
+        //    360, 650, 990, 1380, 2080,
+        //    350, 640, 980, 1370, 2070, 2);
+
         TicketPrices ticketPrices = new TicketPrices();
+
+        public int priceChild1Hr { get; set; }
+        public int priceChild2Hrs { get; set; }
+        public int priceChild3Hrs { get; set; }
+        public int priceChild4Hrs { get; set; }
+        public int priceChildWholeDay { get; set; }
+
+        public int priceAdult1Hr { get; set; }
+        public int priceAdult2Hrs { get; set; }
+        public int priceAdult3Hrs { get; set; }
+        public int priceAdult4Hrs { get; set; }
+        public int priceAdultWholeDay { get; set; }
+
+        public int priceGroup51Hr { get; set; }
+        public int priceGroup52Hrs { get; set; }
+        public int priceGroup53Hrs { get; set; }
+        public int priceGroup54Hrs { get; set; }
+        public int priceGroup5WholeDay { get; set; }
+
+        public int priceGroup101Hr { get; set; }
+        public int priceGroup102Hrs { get; set; }
+        public int priceGroup103Hrs { get; set; }
+        public int priceGroup104Hrs { get; set; }
+        public int priceGroup10WholeDay { get; set; }
+
+        public int priceGroup151Hr { get; set; }
+        public int priceGroup152Hrs { get; set; }
+        public int priceGroup153Hrs { get; set; }
+        public int priceGroup154Hrs { get; set; }
+        public int priceGroup15WholeDay { get; set; }
+
+        public int priceGroup201Hr { get; set; }
+        public int priceGroup202Hrs { get; set; }
+        public int priceGroup203Hrs { get; set; }
+        public int priceGroup204Hrs { get; set; }
+        public int priceGroup20WholeDay { get; set; }
+
+        public int holidayDiscount { get; set; }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -59,7 +104,7 @@ namespace WindowsFormsApp1
             ticketPrices.priceGroup204Hrs = int.Parse(textBoxGroup204Hrs.Text);
             ticketPrices.priceGroup20WholeDay = int.Parse(textBoxGroup20WholeDay.Text);
 
-            ticketPrices.holidayDiscount = float.Parse(textBoxHolidayDiscount.Text);
+            ticketPrices.holidayDiscount = int.Parse(textBoxHolidayDiscount.Text);
 
             saveFileDialog1.ShowDialog();
             string textFilePath = saveFileDialog1.FileName;
@@ -110,54 +155,54 @@ namespace WindowsFormsApp1
             try
             {
                 var lines = System.IO.File.ReadAllLines(filePath);
-                string[] line1Data = lines[0].Split(',');
-                textBoxChild1Hr.Text = line1Data[0].ToString();
-                textBoxChild2Hrs.Text = line1Data[1].ToString();
-                textBoxChild3Hrs.Text= line1Data[2].ToString();
-                textBoxChild4Hrs.Text = line1Data[3].ToString();
-                textBoxChildWholeDay.Text = line1Data[4].ToString(); 
+                string[] line1Data = lines[1].Split(',');
+                textBoxChild1Hr.Text = line1Data[1].ToString();
+                textBoxChild2Hrs.Text = line1Data[2].ToString();
+                textBoxChild3Hrs.Text= line1Data[3].ToString();
+                textBoxChild4Hrs.Text = line1Data[4].ToString();
+                textBoxChildWholeDay.Text = line1Data[5].ToString(); 
 
-                string[] line2Data = lines[1].Split(',');
-                textBoxAdult1Hr.Text= line2Data[0].ToString();
-                textBoxAdult2Hrs.Text = line2Data[1].ToString();
-                textBoxAdult3Hrs.Text = line2Data[2].ToString();
-                textBoxAdult4Hrs.Text = line2Data[3].ToString(); 
-                textBoxAdultWholeDay.Text = line2Data[4].ToString();
+                string[] line2Data = lines[2].Split(',');
+                textBoxAdult1Hr.Text= line2Data[1].ToString();
+                textBoxAdult2Hrs.Text = line2Data[2].ToString();
+                textBoxAdult3Hrs.Text = line2Data[3].ToString();
+                textBoxAdult4Hrs.Text = line2Data[4].ToString(); 
+                textBoxAdultWholeDay.Text = line2Data[5].ToString();
 
-                string[] line3Data = lines[2].Split(',');
-                textBoxGroup51Hr.Text = line3Data[0].ToString();
-                textBoxGroup52Hrs.Text = line3Data[1].ToString();
-                textBoxGroup53Hrs.Text = line3Data[2].ToString();
-                textBoxGroup54Hrs.Text = line3Data[3].ToString();
-                textBoxGroup5WholeDay.Text = line3Data[4].ToString();
+                string[] line3Data = lines[3].Split(',');
+                textBoxGroup51Hr.Text = line3Data[1].ToString();
+                textBoxGroup52Hrs.Text = line3Data[2].ToString();
+                textBoxGroup53Hrs.Text = line3Data[3].ToString();
+                textBoxGroup54Hrs.Text = line3Data[4].ToString();
+                textBoxGroup5WholeDay.Text = line3Data[5].ToString();
 
-                string[] line4Data = lines[3].Split(',');
-                textBoxGroup101Hr.Text = line4Data[0].ToString();
-                textBoxGroup102Hrs.Text =line4Data[1].ToString();
-                textBoxGroup103Hrs.Text = line4Data[2].ToString();
-                textBoxGroup104Hrs.Text= line4Data[3].ToString();
-                textBoxGroup10WholeDay.Text= line4Data[4].ToString();
+                string[] line4Data = lines[4].Split(',');
+                textBoxGroup101Hr.Text = line4Data[1].ToString();
+                textBoxGroup102Hrs.Text =line4Data[2].ToString();
+                textBoxGroup103Hrs.Text = line4Data[3].ToString();
+                textBoxGroup104Hrs.Text= line4Data[4].ToString();
+                textBoxGroup10WholeDay.Text= line4Data[5].ToString();
 
-                string[] line5Data = lines[4].Split(',');
-                textBoxGroup151Hr.Text = line5Data[0].ToString();
-                textBoxGroup152Hrs.Text = line5Data[1].ToString();
-                textBoxGroup153Hrs.Text = line5Data[2].ToString();
-                textBoxGroup154Hrs.Text = line5Data[3].ToString();
-                textBoxGroup15WholeDay.Text = line5Data[4].ToString();
+                string[] line5Data = lines[5].Split(',');
+                textBoxGroup151Hr.Text = line5Data[1].ToString();
+                textBoxGroup152Hrs.Text = line5Data[2].ToString();
+                textBoxGroup153Hrs.Text = line5Data[3].ToString();
+                textBoxGroup154Hrs.Text = line5Data[4].ToString();
+                textBoxGroup15WholeDay.Text = line5Data[5].ToString();
 
-                string[] line6Data = lines[5].Split(',');
-                textBoxGroup201Hr.Text = line6Data[0].ToString();
-                textBoxGroup202Hrs.Text = line6Data[1].ToString();
-                textBoxGroup203Hrs.Text = line6Data[2].ToString();
-                textBoxGroup204Hrs.Text = line6Data[3].ToString();
-                textBoxGroup20WholeDay.Text = line6Data[4].ToString();
+                string[] line6Data = lines[6].Split(',');
+                textBoxGroup201Hr.Text = line6Data[1].ToString();
+                textBoxGroup202Hrs.Text = line6Data[2].ToString();
+                textBoxGroup203Hrs.Text = line6Data[3].ToString();
+                textBoxGroup204Hrs.Text = line6Data[4].ToString();
+                textBoxGroup20WholeDay.Text = line6Data[5].ToString();
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Error Occured in importing data, Please Check", "Try Again",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-            
+        }             
 
         private void buttonImport_Click(object sender, EventArgs e)
         {

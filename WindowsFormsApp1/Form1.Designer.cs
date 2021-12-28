@@ -30,11 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.labelTicketId = new System.Windows.Forms.Label();
-            this.textBoxTicketId = new System.Windows.Forms.TextBox();
-            this.checkboxIsGroup = new System.Windows.Forms.CheckBox();
             this.labelEntryTime = new System.Windows.Forms.Label();
-            this.dateTimePickerEntryTime = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerExitTime = new System.Windows.Forms.DateTimePicker();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.labelExitTime = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
@@ -47,17 +44,17 @@ namespace WindowsFormsApp1
             this.labelAge = new System.Windows.Forms.Label();
             this.textBoxAge = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.labelAgeDisplay = new System.Windows.Forms.Label();
+            this.labelGroupOfDisplay = new System.Windows.Forms.Label();
+            this.labelTimeSpent = new System.Windows.Forms.Label();
+            this.buttonCheckOut = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelTotalPrice = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBoxisHolidayDisplay = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridVisitor = new System.Windows.Forms.DataGridView();
@@ -65,7 +62,15 @@ namespace WindowsFormsApp1
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.checkBoxIsHoliday = new System.Windows.Forms.CheckBox();
-            this.labelTextNameValidation = new System.Windows.Forms.Label();
+            this.comboBoxEntryHour = new System.Windows.Forms.ComboBox();
+            this.comboBoxEntryMinute = new System.Windows.Forms.ComboBox();
+            this.comboBoxExitMinute = new System.Windows.Forms.ComboBox();
+            this.comboBoxExitHour = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxTicketId = new System.Windows.Forms.TextBox();
+            this.buttonNew = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVisitor)).BeginInit();
             this.SuspendLayout();
@@ -73,100 +78,70 @@ namespace WindowsFormsApp1
             // labelTicketId
             // 
             this.labelTicketId.AutoSize = true;
-            this.labelTicketId.Location = new System.Drawing.Point(51, 88);
-            this.labelTicketId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTicketId.Location = new System.Drawing.Point(68, 105);
             this.labelTicketId.Name = "labelTicketId";
-            this.labelTicketId.Size = new System.Drawing.Size(54, 13);
+            this.labelTicketId.Size = new System.Drawing.Size(63, 16);
             this.labelTicketId.TabIndex = 0;
             this.labelTicketId.Text = "Ticket ID:";
-            // 
-            // textBoxTicketId
-            // 
-            this.textBoxTicketId.Location = new System.Drawing.Point(106, 85);
-            this.textBoxTicketId.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxTicketId.Name = "textBoxTicketId";
-            this.textBoxTicketId.Size = new System.Drawing.Size(122, 20);
-            this.textBoxTicketId.TabIndex = 1;
-            // 
-            // checkboxIsGroup
-            // 
-            this.checkboxIsGroup.AutoSize = true;
-            this.checkboxIsGroup.Location = new System.Drawing.Point(56, 149);
-            this.checkboxIsGroup.Margin = new System.Windows.Forms.Padding(2);
-            this.checkboxIsGroup.Name = "checkboxIsGroup";
-            this.checkboxIsGroup.Size = new System.Drawing.Size(72, 17);
-            this.checkboxIsGroup.TabIndex = 2;
-            this.checkboxIsGroup.Text = "Is Group?";
-            this.checkboxIsGroup.UseVisualStyleBackColor = true;
             // 
             // labelEntryTime
             // 
             this.labelEntryTime.AutoSize = true;
-            this.labelEntryTime.Location = new System.Drawing.Point(52, 179);
-            this.labelEntryTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelEntryTime.Location = new System.Drawing.Point(69, 220);
             this.labelEntryTime.Name = "labelEntryTime";
-            this.labelEntryTime.Size = new System.Drawing.Size(57, 13);
+            this.labelEntryTime.Size = new System.Drawing.Size(71, 16);
             this.labelEntryTime.TabIndex = 5;
             this.labelEntryTime.Text = "Entry Time";
             // 
-            // dateTimePickerEntryTime
+            // datePicker
             // 
-            this.dateTimePickerEntryTime.Location = new System.Drawing.Point(130, 174);
-            this.dateTimePickerEntryTime.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerEntryTime.Name = "dateTimePickerEntryTime";
-            this.dateTimePickerEntryTime.Size = new System.Drawing.Size(193, 20);
-            this.dateTimePickerEntryTime.TabIndex = 6;
-            // 
-            // dateTimePickerExitTime
-            // 
-            this.dateTimePickerExitTime.Location = new System.Drawing.Point(130, 207);
-            this.dateTimePickerExitTime.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePickerExitTime.Name = "dateTimePickerExitTime";
-            this.dateTimePickerExitTime.Size = new System.Drawing.Size(193, 20);
-            this.dateTimePickerExitTime.TabIndex = 8;
+            this.datePicker.Location = new System.Drawing.Point(141, 71);
+            this.datePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(256, 22);
+            this.datePicker.TabIndex = 8;
+            this.datePicker.Value = new System.DateTime(2021, 12, 10, 0, 0, 0, 0);
             // 
             // labelExitTime
             // 
             this.labelExitTime.AutoSize = true;
-            this.labelExitTime.Location = new System.Drawing.Point(53, 211);
-            this.labelExitTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelExitTime.Location = new System.Drawing.Point(68, 257);
             this.labelExitTime.Name = "labelExitTime";
-            this.labelExitTime.Size = new System.Drawing.Size(50, 13);
+            this.labelExitTime.Size = new System.Drawing.Size(62, 16);
             this.labelExitTime.TabIndex = 7;
             this.labelExitTime.Text = "Exit Time";
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(106, 115);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxName.Location = new System.Drawing.Point(141, 142);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(104, 20);
+            this.textBoxName.Size = new System.Drawing.Size(137, 22);
             this.textBoxName.TabIndex = 11;
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(52, 117);
-            this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelName.Location = new System.Drawing.Point(69, 145);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(38, 13);
+            this.labelName.Size = new System.Drawing.Size(47, 16);
             this.labelName.TabIndex = 10;
             this.labelName.Text = "Name:";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(545, 41);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.Location = new System.Drawing.Point(801, 384);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(97, 20);
+            this.textBox6.Size = new System.Drawing.Size(128, 22);
             this.textBox6.TabIndex = 13;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(247, 263);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(419, 324);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(56, 29);
+            this.btnSave.Size = new System.Drawing.Size(75, 36);
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -174,10 +149,10 @@ namespace WindowsFormsApp1
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(320, 263);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Location = new System.Drawing.Point(509, 324);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(56, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(75, 36);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -185,10 +160,9 @@ namespace WindowsFormsApp1
             // labelsearch
             // 
             this.labelsearch.AutoSize = true;
-            this.labelsearch.Location = new System.Drawing.Point(501, 44);
-            this.labelsearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelsearch.Location = new System.Drawing.Point(743, 388);
             this.labelsearch.Name = "labelsearch";
-            this.labelsearch.Size = new System.Drawing.Size(41, 13);
+            this.labelsearch.Size = new System.Drawing.Size(50, 16);
             this.labelsearch.TabIndex = 16;
             this.labelsearch.Text = "Search";
             // 
@@ -196,180 +170,183 @@ namespace WindowsFormsApp1
             // 
             this.comboBoxGroupOf.FormattingEnabled = true;
             this.comboBoxGroupOf.Items.AddRange(new object[] {
+            "0",
             "5",
             "10",
             "15",
             "20"});
-            this.comboBoxGroupOf.Location = new System.Drawing.Point(233, 147);
-            this.comboBoxGroupOf.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxGroupOf.Location = new System.Drawing.Point(141, 178);
+            this.comboBoxGroupOf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxGroupOf.Name = "comboBoxGroupOf";
-            this.comboBoxGroupOf.Size = new System.Drawing.Size(90, 21);
+            this.comboBoxGroupOf.Size = new System.Drawing.Size(88, 24);
             this.comboBoxGroupOf.TabIndex = 21;
+            this.comboBoxGroupOf.Text = "0";
             // 
             // labelGroupOf
             // 
             this.labelGroupOf.AutoSize = true;
-            this.labelGroupOf.Location = new System.Drawing.Point(175, 150);
-            this.labelGroupOf.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelGroupOf.Location = new System.Drawing.Point(68, 181);
             this.labelGroupOf.Name = "labelGroupOf";
-            this.labelGroupOf.Size = new System.Drawing.Size(53, 13);
+            this.labelGroupOf.Size = new System.Drawing.Size(63, 16);
             this.labelGroupOf.TabIndex = 22;
             this.labelGroupOf.Text = "Group Of:";
             // 
             // labelAge
             // 
             this.labelAge.AutoSize = true;
-            this.labelAge.Location = new System.Drawing.Point(218, 118);
-            this.labelAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAge.Location = new System.Drawing.Point(291, 145);
             this.labelAge.Name = "labelAge";
-            this.labelAge.Size = new System.Drawing.Size(26, 13);
+            this.labelAge.Size = new System.Drawing.Size(32, 16);
             this.labelAge.TabIndex = 23;
             this.labelAge.Text = "Age";
             // 
             // textBoxAge
             // 
-            this.textBoxAge.Location = new System.Drawing.Point(247, 115);
-            this.textBoxAge.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxAge.Location = new System.Drawing.Point(329, 142);
+            this.textBoxAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAge.Name = "textBoxAge";
-            this.textBoxAge.Size = new System.Drawing.Size(79, 20);
+            this.textBoxAge.Size = new System.Drawing.Size(65, 22);
             this.textBoxAge.TabIndex = 24;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.labelAgeDisplay);
+            this.groupBox1.Controls.Add(this.labelGroupOfDisplay);
+            this.groupBox1.Controls.Add(this.labelTimeSpent);
+            this.groupBox1.Controls.Add(this.buttonCheckOut);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.labelTotalPrice);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.checkBoxisHolidayDisplay);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(345, 74);
+            this.groupBox1.Location = new System.Drawing.Point(438, 71);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 153);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(355, 207);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Price";
             // 
-            // textBox3
+            // labelAgeDisplay
             // 
-            this.textBox3.Location = new System.Drawing.Point(110, 54);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(41, 20);
-            this.textBox3.TabIndex = 28;
+            this.labelAgeDisplay.AutoSize = true;
+            this.labelAgeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAgeDisplay.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.labelAgeDisplay.Location = new System.Drawing.Point(66, 55);
+            this.labelAgeDisplay.Name = "labelAgeDisplay";
+            this.labelAgeDisplay.Size = new System.Drawing.Size(29, 31);
+            this.labelAgeDisplay.TabIndex = 42;
+            this.labelAgeDisplay.Text = "4";
+            // 
+            // labelGroupOfDisplay
+            // 
+            this.labelGroupOfDisplay.AutoSize = true;
+            this.labelGroupOfDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGroupOfDisplay.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.labelGroupOfDisplay.Location = new System.Drawing.Point(286, 24);
+            this.labelGroupOfDisplay.Name = "labelGroupOfDisplay";
+            this.labelGroupOfDisplay.Size = new System.Drawing.Size(29, 31);
+            this.labelGroupOfDisplay.TabIndex = 41;
+            this.labelGroupOfDisplay.Text = "0";
+            // 
+            // labelTimeSpent
+            // 
+            this.labelTimeSpent.AutoSize = true;
+            this.labelTimeSpent.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimeSpent.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.labelTimeSpent.Location = new System.Drawing.Point(126, 23);
+            this.labelTimeSpent.Name = "labelTimeSpent";
+            this.labelTimeSpent.Size = new System.Drawing.Size(29, 31);
+            this.labelTimeSpent.TabIndex = 40;
+            this.labelTimeSpent.Text = "4";
+            // 
+            // buttonCheckOut
+            // 
+            this.buttonCheckOut.Location = new System.Drawing.Point(222, 149);
+            this.buttonCheckOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCheckOut.Name = "buttonCheckOut";
+            this.buttonCheckOut.Size = new System.Drawing.Size(75, 36);
+            this.buttonCheckOut.TabIndex = 39;
+            this.buttonCheckOut.Text = "Checkout";
+            this.buttonCheckOut.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(81, 57);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(19, 67);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 13);
+            this.label8.Size = new System.Drawing.Size(32, 16);
             this.label8.TabIndex = 27;
             this.label8.Text = "Age";
             // 
-            // label7
+            // labelTotalPrice
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label7.Location = new System.Drawing.Point(76, 109);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 25);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "4999";
+            this.labelTotalPrice.AutoSize = true;
+            this.labelTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalPrice.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.labelTotalPrice.Location = new System.Drawing.Point(101, 134);
+            this.labelTotalPrice.Name = "labelTotalPrice";
+            this.labelTotalPrice.Size = new System.Drawing.Size(74, 31);
+            this.labelTotalPrice.TabIndex = 34;
+            this.labelTotalPrice.Text = "4999";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 113);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(19, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.Size = new System.Drawing.Size(75, 16);
             this.label6.TabIndex = 33;
             this.label6.Text = "Total Price:";
             // 
-            // checkBox2
+            // checkBoxisHolidayDisplay
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(122, 85);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(78, 17);
-            this.checkBox2.TabIndex = 32;
-            this.checkBox2.Text = "Is Holiday?";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(146, 27);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 17);
-            this.checkBox1.TabIndex = 26;
-            this.checkBox1.Text = "Is Group?";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(266, 25);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(31, 20);
-            this.textBox2.TabIndex = 31;
+            this.checkBoxisHolidayDisplay.AutoSize = true;
+            this.checkBoxisHolidayDisplay.Location = new System.Drawing.Point(163, 105);
+            this.checkBoxisHolidayDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxisHolidayDisplay.Name = "checkBoxisHolidayDisplay";
+            this.checkBoxisHolidayDisplay.Size = new System.Drawing.Size(96, 20);
+            this.checkBoxisHolidayDisplay.TabIndex = 32;
+            this.checkBoxisHolidayDisplay.Text = "Is Holiday?";
+            this.checkBoxisHolidayDisplay.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(219, 28);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(219, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 30;
             this.label4.Text = "Group of ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 86);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(19, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 13);
+            this.label3.Size = new System.Drawing.Size(131, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "Discount Categories:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(157, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 13);
+            this.label2.Size = new System.Drawing.Size(28, 16);
             this.label2.TabIndex = 28;
             this.label2.Text = "Hrs";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(83, 24);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(31, 20);
-            this.textBox1.TabIndex = 27;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(19, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 26;
             this.label1.Text = "Time Spent";
             // 
@@ -377,26 +354,29 @@ namespace WindowsFormsApp1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Javanese Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 31);
+            this.label5.Location = new System.Drawing.Point(352, 14);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 43);
+            this.label5.Size = new System.Drawing.Size(232, 54);
             this.label5.TabIndex = 26;
             this.label5.Text = "Visitor Data Entry";
             // 
             // dataGridVisitor
             // 
             this.dataGridVisitor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridVisitor.Location = new System.Drawing.Point(8, 332);
+            this.dataGridVisitor.Location = new System.Drawing.Point(11, 422);
+            this.dataGridVisitor.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridVisitor.Name = "dataGridVisitor";
-            this.dataGridVisitor.Size = new System.Drawing.Size(700, 150);
+            this.dataGridVisitor.RowHeadersWidth = 51;
+            this.dataGridVisitor.Size = new System.Drawing.Size(933, 185);
             this.dataGridVisitor.TabIndex = 27;
             // 
             // buttonShowData
             // 
-            this.buttonShowData.Location = new System.Drawing.Point(389, 263);
-            this.buttonShowData.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonShowData.Location = new System.Drawing.Point(71, 377);
+            this.buttonShowData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonShowData.Name = "buttonShowData";
-            this.buttonShowData.Size = new System.Drawing.Size(75, 29);
+            this.buttonShowData.Size = new System.Drawing.Size(100, 36);
             this.buttonShowData.TabIndex = 28;
             this.buttonShowData.Text = "Show Data";
             this.buttonShowData.UseVisualStyleBackColor = true;
@@ -409,30 +389,259 @@ namespace WindowsFormsApp1
             // checkBoxIsHoliday
             // 
             this.checkBoxIsHoliday.AutoSize = true;
-            this.checkBoxIsHoliday.Location = new System.Drawing.Point(56, 245);
-            this.checkBoxIsHoliday.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxIsHoliday.Location = new System.Drawing.Point(298, 106);
+            this.checkBoxIsHoliday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxIsHoliday.Name = "checkBoxIsHoliday";
-            this.checkBoxIsHoliday.Size = new System.Drawing.Size(78, 17);
+            this.checkBoxIsHoliday.Size = new System.Drawing.Size(96, 20);
             this.checkBoxIsHoliday.TabIndex = 29;
             this.checkBoxIsHoliday.Text = "Is Holiday?";
             this.checkBoxIsHoliday.UseVisualStyleBackColor = true;
             // 
-            // labelTextNameValidation
+            // comboBoxEntryHour
             // 
-            this.labelTextNameValidation.AutoSize = true;
-            this.labelTextNameValidation.ForeColor = System.Drawing.Color.Red;
-            this.labelTextNameValidation.Location = new System.Drawing.Point(54, 72);
-            this.labelTextNameValidation.Name = "labelTextNameValidation";
-            this.labelTextNameValidation.Size = new System.Drawing.Size(35, 13);
-            this.labelTextNameValidation.TabIndex = 30;
-            this.labelTextNameValidation.Text = "label9";
+            this.comboBoxEntryHour.FormattingEnabled = true;
+            this.comboBoxEntryHour.Items.AddRange(new object[] {
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16"});
+            this.comboBoxEntryHour.Location = new System.Drawing.Point(141, 217);
+            this.comboBoxEntryHour.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxEntryHour.Name = "comboBoxEntryHour";
+            this.comboBoxEntryHour.Size = new System.Drawing.Size(75, 24);
+            this.comboBoxEntryHour.TabIndex = 30;
+            this.comboBoxEntryHour.Text = "00";
+            // 
+            // comboBoxEntryMinute
+            // 
+            this.comboBoxEntryMinute.FormattingEnabled = true;
+            this.comboBoxEntryMinute.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
+            this.comboBoxEntryMinute.Location = new System.Drawing.Point(233, 217);
+            this.comboBoxEntryMinute.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxEntryMinute.Name = "comboBoxEntryMinute";
+            this.comboBoxEntryMinute.Size = new System.Drawing.Size(75, 24);
+            this.comboBoxEntryMinute.TabIndex = 31;
+            this.comboBoxEntryMinute.Text = "00";
+            // 
+            // comboBoxExitMinute
+            // 
+            this.comboBoxExitMinute.FormattingEnabled = true;
+            this.comboBoxExitMinute.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59"});
+            this.comboBoxExitMinute.Location = new System.Drawing.Point(233, 252);
+            this.comboBoxExitMinute.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxExitMinute.Name = "comboBoxExitMinute";
+            this.comboBoxExitMinute.Size = new System.Drawing.Size(75, 24);
+            this.comboBoxExitMinute.TabIndex = 33;
+            this.comboBoxExitMinute.Text = "00";
+            // 
+            // comboBoxExitHour
+            // 
+            this.comboBoxExitHour.FormattingEnabled = true;
+            this.comboBoxExitHour.Items.AddRange(new object[] {
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"});
+            this.comboBoxExitHour.Location = new System.Drawing.Point(141, 254);
+            this.comboBoxExitHour.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxExitHour.Name = "comboBoxExitHour";
+            this.comboBoxExitHour.Size = new System.Drawing.Size(75, 24);
+            this.comboBoxExitHour.TabIndex = 32;
+            this.comboBoxExitHour.Text = "00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(68, 71);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 16);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Date:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.IndianRed;
+            this.label10.Location = new System.Drawing.Point(316, 217);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 18);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "upto 4:59 PM";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.IndianRed;
+            this.label11.Location = new System.Drawing.Point(319, 254);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 18);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "upto 6:00 PM";
+            // 
+            // textBoxTicketId
+            // 
+            this.textBoxTicketId.Location = new System.Drawing.Point(141, 105);
+            this.textBoxTicketId.Name = "textBoxTicketId";
+            this.textBoxTicketId.Size = new System.Drawing.Size(114, 22);
+            this.textBoxTicketId.TabIndex = 37;
+            // 
+            // buttonNew
+            // 
+            this.buttonNew.Location = new System.Drawing.Point(329, 324);
+            this.buttonNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonNew.Name = "buttonNew";
+            this.buttonNew.Size = new System.Drawing.Size(75, 36);
+            this.buttonNew.TabIndex = 38;
+            this.buttonNew.Text = "New";
+            this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 506);
-            this.Controls.Add(this.labelTextNameValidation);
+            this.ClientSize = new System.Drawing.Size(960, 623);
+            this.Controls.Add(this.buttonNew);
+            this.Controls.Add(this.textBoxTicketId);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.comboBoxExitMinute);
+            this.Controls.Add(this.comboBoxExitHour);
+            this.Controls.Add(this.comboBoxEntryMinute);
+            this.Controls.Add(this.comboBoxEntryHour);
             this.Controls.Add(this.checkBoxIsHoliday);
             this.Controls.Add(this.buttonShowData);
             this.Controls.Add(this.dataGridVisitor);
@@ -448,14 +657,11 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.dateTimePickerExitTime);
+            this.Controls.Add(this.datePicker);
             this.Controls.Add(this.labelExitTime);
-            this.Controls.Add(this.dateTimePickerEntryTime);
             this.Controls.Add(this.labelEntryTime);
-            this.Controls.Add(this.checkboxIsGroup);
-            this.Controls.Add(this.textBoxTicketId);
             this.Controls.Add(this.labelTicketId);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -469,11 +675,8 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Label labelTicketId;
-        private System.Windows.Forms.TextBox textBoxTicketId;
-        private System.Windows.Forms.CheckBox checkboxIsGroup;
         private System.Windows.Forms.Label labelEntryTime;
-        private System.Windows.Forms.DateTimePicker dateTimePickerEntryTime;
-        private System.Windows.Forms.DateTimePicker dateTimePickerExitTime;
+        private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.Label labelExitTime;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelName;
@@ -486,25 +689,33 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label labelAge;
         private System.Windows.Forms.TextBox textBoxAge;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox checkBoxisHolidayDisplay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelTotalPrice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridVisitor;
         private System.Windows.Forms.Button buttonShowData;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.CheckBox checkBoxIsHoliday;
-        private System.Windows.Forms.Label labelTextNameValidation;
+        private System.Windows.Forms.ComboBox comboBoxEntryHour;
+        private System.Windows.Forms.ComboBox comboBoxEntryMinute;
+        private System.Windows.Forms.ComboBox comboBoxExitMinute;
+        private System.Windows.Forms.ComboBox comboBoxExitHour;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxTicketId;
+        private System.Windows.Forms.Button buttonNew;
+        private System.Windows.Forms.Button buttonCheckOut;
+        private System.Windows.Forms.Label labelTimeSpent;
+        private System.Windows.Forms.Label labelGroupOfDisplay;
+        private System.Windows.Forms.Label labelAgeDisplay;
     }
 }
 

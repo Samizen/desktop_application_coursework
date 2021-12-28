@@ -9,10 +9,13 @@ namespace WindowsFormsApp1
     class Visitor
     {
         public string ticketID { get; set; }
+
         public string name { get; set; }
         public int age { get; set; }
         public string isGroup { get; set; }
         public int groupOf { get; set; }
+
+        public string date { get; set; }
 
         public string entryTime { get; set; }
         
