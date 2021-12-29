@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
             this.labelExitTime = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.labelsearch = new System.Windows.Forms.Label();
@@ -47,7 +47,6 @@ namespace WindowsFormsApp1
             this.labelAgeDisplay = new System.Windows.Forms.Label();
             this.labelGroupOfDisplay = new System.Windows.Forms.Label();
             this.labelTimeSpent = new System.Windows.Forms.Label();
-            this.buttonCheckOut = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.labelTotalPrice = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -69,8 +68,8 @@ namespace WindowsFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBoxTicketId = new System.Windows.Forms.TextBox();
             this.buttonNew = new System.Windows.Forms.Button();
+            this.labelTicketIdDisplay = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVisitor)).BeginInit();
             this.SuspendLayout();
@@ -128,17 +127,18 @@ namespace WindowsFormsApp1
             this.labelName.TabIndex = 10;
             this.labelName.Text = "Name:";
             // 
-            // textBox6
+            // textBoxSearch
             // 
-            this.textBox6.Location = new System.Drawing.Point(801, 384);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(128, 22);
-            this.textBox6.TabIndex = 13;
+            this.textBoxSearch.Location = new System.Drawing.Point(801, 384);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(128, 22);
+            this.textBoxSearch.TabIndex = 13;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(419, 324);
+            this.btnSave.Location = new System.Drawing.Point(233, 315);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 36);
@@ -149,13 +149,14 @@ namespace WindowsFormsApp1
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(509, 324);
+            this.btnUpdate.Location = new System.Drawing.Point(523, 377);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 36);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // labelsearch
             // 
@@ -213,7 +214,6 @@ namespace WindowsFormsApp1
             this.groupBox1.Controls.Add(this.labelAgeDisplay);
             this.groupBox1.Controls.Add(this.labelGroupOfDisplay);
             this.groupBox1.Controls.Add(this.labelTimeSpent);
-            this.groupBox1.Controls.Add(this.buttonCheckOut);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.labelTotalPrice);
             this.groupBox1.Controls.Add(this.label6);
@@ -238,9 +238,8 @@ namespace WindowsFormsApp1
             this.labelAgeDisplay.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.labelAgeDisplay.Location = new System.Drawing.Point(66, 55);
             this.labelAgeDisplay.Name = "labelAgeDisplay";
-            this.labelAgeDisplay.Size = new System.Drawing.Size(29, 31);
+            this.labelAgeDisplay.Size = new System.Drawing.Size(0, 31);
             this.labelAgeDisplay.TabIndex = 42;
-            this.labelAgeDisplay.Text = "4";
             // 
             // labelGroupOfDisplay
             // 
@@ -249,9 +248,8 @@ namespace WindowsFormsApp1
             this.labelGroupOfDisplay.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.labelGroupOfDisplay.Location = new System.Drawing.Point(286, 24);
             this.labelGroupOfDisplay.Name = "labelGroupOfDisplay";
-            this.labelGroupOfDisplay.Size = new System.Drawing.Size(29, 31);
+            this.labelGroupOfDisplay.Size = new System.Drawing.Size(0, 31);
             this.labelGroupOfDisplay.TabIndex = 41;
-            this.labelGroupOfDisplay.Text = "0";
             // 
             // labelTimeSpent
             // 
@@ -260,19 +258,8 @@ namespace WindowsFormsApp1
             this.labelTimeSpent.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.labelTimeSpent.Location = new System.Drawing.Point(126, 23);
             this.labelTimeSpent.Name = "labelTimeSpent";
-            this.labelTimeSpent.Size = new System.Drawing.Size(29, 31);
+            this.labelTimeSpent.Size = new System.Drawing.Size(0, 31);
             this.labelTimeSpent.TabIndex = 40;
-            this.labelTimeSpent.Text = "4";
-            // 
-            // buttonCheckOut
-            // 
-            this.buttonCheckOut.Location = new System.Drawing.Point(222, 149);
-            this.buttonCheckOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonCheckOut.Name = "buttonCheckOut";
-            this.buttonCheckOut.Size = new System.Drawing.Size(75, 36);
-            this.buttonCheckOut.TabIndex = 39;
-            this.buttonCheckOut.Text = "Checkout";
-            this.buttonCheckOut.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -290,9 +277,8 @@ namespace WindowsFormsApp1
             this.labelTotalPrice.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.labelTotalPrice.Location = new System.Drawing.Point(101, 134);
             this.labelTotalPrice.Name = "labelTotalPrice";
-            this.labelTotalPrice.Size = new System.Drawing.Size(74, 31);
+            this.labelTotalPrice.Size = new System.Drawing.Size(0, 31);
             this.labelTotalPrice.TabIndex = 34;
-            this.labelTotalPrice.Text = "4999";
             // 
             // label6
             // 
@@ -364,6 +350,7 @@ namespace WindowsFormsApp1
             // dataGridVisitor
             // 
             this.dataGridVisitor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridVisitor.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridVisitor.Location = new System.Drawing.Point(11, 422);
             this.dataGridVisitor.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridVisitor.Name = "dataGridVisitor";
@@ -373,7 +360,7 @@ namespace WindowsFormsApp1
             // 
             // buttonShowData
             // 
-            this.buttonShowData.Location = new System.Drawing.Point(71, 377);
+            this.buttonShowData.Location = new System.Drawing.Point(417, 377);
             this.buttonShowData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonShowData.Name = "buttonShowData";
             this.buttonShowData.Size = new System.Drawing.Size(100, 36);
@@ -413,7 +400,7 @@ namespace WindowsFormsApp1
             this.comboBoxEntryHour.Name = "comboBoxEntryHour";
             this.comboBoxEntryHour.Size = new System.Drawing.Size(75, 24);
             this.comboBoxEntryHour.TabIndex = 30;
-            this.comboBoxEntryHour.Text = "00";
+            this.comboBoxEntryHour.Text = "10";
             // 
             // comboBoxEntryMinute
             // 
@@ -575,7 +562,7 @@ namespace WindowsFormsApp1
             this.comboBoxExitHour.Name = "comboBoxExitHour";
             this.comboBoxExitHour.Size = new System.Drawing.Size(75, 24);
             this.comboBoxExitHour.TabIndex = 32;
-            this.comboBoxExitHour.Text = "00";
+            this.comboBoxExitHour.Text = "11";
             // 
             // label9
             // 
@@ -610,16 +597,9 @@ namespace WindowsFormsApp1
             this.label11.TabIndex = 36;
             this.label11.Text = "upto 6:00 PM";
             // 
-            // textBoxTicketId
-            // 
-            this.textBoxTicketId.Location = new System.Drawing.Point(141, 105);
-            this.textBoxTicketId.Name = "textBoxTicketId";
-            this.textBoxTicketId.Size = new System.Drawing.Size(114, 22);
-            this.textBoxTicketId.TabIndex = 37;
-            // 
             // buttonNew
             // 
-            this.buttonNew.Location = new System.Drawing.Point(329, 324);
+            this.buttonNew.Location = new System.Drawing.Point(148, 315);
             this.buttonNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(75, 36);
@@ -628,13 +608,24 @@ namespace WindowsFormsApp1
             this.buttonNew.UseVisualStyleBackColor = true;
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
+            // labelTicketIdDisplay
+            // 
+            this.labelTicketIdDisplay.AutoSize = true;
+            this.labelTicketIdDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTicketIdDisplay.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.labelTicketIdDisplay.Location = new System.Drawing.Point(144, 105);
+            this.labelTicketIdDisplay.Name = "labelTicketIdDisplay";
+            this.labelTicketIdDisplay.Size = new System.Drawing.Size(109, 20);
+            this.labelTicketIdDisplay.TabIndex = 43;
+            this.labelTicketIdDisplay.Text = "T0129344569";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 623);
+            this.Controls.Add(this.labelTicketIdDisplay);
             this.Controls.Add(this.buttonNew);
-            this.Controls.Add(this.textBoxTicketId);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -654,7 +645,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.labelsearch);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.datePicker);
@@ -680,7 +671,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label labelExitTime;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label labelsearch;
@@ -710,12 +701,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBoxTicketId;
         private System.Windows.Forms.Button buttonNew;
-        private System.Windows.Forms.Button buttonCheckOut;
         private System.Windows.Forms.Label labelTimeSpent;
         private System.Windows.Forms.Label labelGroupOfDisplay;
         private System.Windows.Forms.Label labelAgeDisplay;
+        private System.Windows.Forms.Label labelTicketIdDisplay;
     }
 }
 

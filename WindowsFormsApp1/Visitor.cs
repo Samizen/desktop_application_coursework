@@ -12,7 +12,6 @@ namespace WindowsFormsApp1
 
         public string name { get; set; }
         public int age { get; set; }
-        public string isGroup { get; set; }
         public int groupOf { get; set; }
 
         public string date { get; set; }
