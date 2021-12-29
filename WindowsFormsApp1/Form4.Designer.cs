@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.labelReport = new System.Windows.Forms.Label();
             this.labelDailyReport = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,10 +47,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.labelNoChild = new System.Windows.Forms.Label();
             this.labelAdultNo = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.labelNo10 = new System.Windows.Forms.Label();
-            this.labelNo15 = new System.Windows.Forms.Label();
-            this.labelNo20 = new System.Windows.Forms.Label();
+            this.labelNoGroup5 = new System.Windows.Forms.Label();
+            this.labelNoGroup10 = new System.Windows.Forms.Label();
+            this.labelNoGroup15 = new System.Windows.Forms.Label();
+            this.labelNoGroup20 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -61,6 +61,12 @@
             this.buttonGenerateReport = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.dateTimePickerSelection = new System.Windows.Forms.DateTimePicker();
+            this.buttonChooseDate = new System.Windows.Forms.Button();
+            this.buttonSelectSort = new System.Windows.Forms.Button();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.labelNoGroup = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -198,49 +204,49 @@
             this.labelAdultNo.TabIndex = 12;
             this.labelAdultNo.Text = "Adult";
             // 
-            // label10
+            // labelNoGroup5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label10.Location = new System.Drawing.Point(385, 156);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 20);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "5";
+            this.labelNoGroup5.AutoSize = true;
+            this.labelNoGroup5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoGroup5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelNoGroup5.Location = new System.Drawing.Point(385, 156);
+            this.labelNoGroup5.Name = "labelNoGroup5";
+            this.labelNoGroup5.Size = new System.Drawing.Size(18, 20);
+            this.labelNoGroup5.TabIndex = 13;
+            this.labelNoGroup5.Text = "5";
             // 
-            // labelNo10
+            // labelNoGroup10
             // 
-            this.labelNo10.AutoSize = true;
-            this.labelNo10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNo10.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelNo10.Location = new System.Drawing.Point(385, 185);
-            this.labelNo10.Name = "labelNo10";
-            this.labelNo10.Size = new System.Drawing.Size(27, 20);
-            this.labelNo10.TabIndex = 14;
-            this.labelNo10.Text = "10";
+            this.labelNoGroup10.AutoSize = true;
+            this.labelNoGroup10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoGroup10.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelNoGroup10.Location = new System.Drawing.Point(385, 185);
+            this.labelNoGroup10.Name = "labelNoGroup10";
+            this.labelNoGroup10.Size = new System.Drawing.Size(27, 20);
+            this.labelNoGroup10.TabIndex = 14;
+            this.labelNoGroup10.Text = "10";
             // 
-            // labelNo15
+            // labelNoGroup15
             // 
-            this.labelNo15.AutoSize = true;
-            this.labelNo15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNo15.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelNo15.Location = new System.Drawing.Point(385, 216);
-            this.labelNo15.Name = "labelNo15";
-            this.labelNo15.Size = new System.Drawing.Size(27, 20);
-            this.labelNo15.TabIndex = 15;
-            this.labelNo15.Text = "15";
+            this.labelNoGroup15.AutoSize = true;
+            this.labelNoGroup15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoGroup15.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelNoGroup15.Location = new System.Drawing.Point(385, 216);
+            this.labelNoGroup15.Name = "labelNoGroup15";
+            this.labelNoGroup15.Size = new System.Drawing.Size(27, 20);
+            this.labelNoGroup15.TabIndex = 15;
+            this.labelNoGroup15.Text = "15";
             // 
-            // labelNo20
+            // labelNoGroup20
             // 
-            this.labelNo20.AutoSize = true;
-            this.labelNo20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNo20.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelNo20.Location = new System.Drawing.Point(385, 248);
-            this.labelNo20.Name = "labelNo20";
-            this.labelNo20.Size = new System.Drawing.Size(27, 20);
-            this.labelNo20.TabIndex = 16;
-            this.labelNo20.Text = "20";
+            this.labelNoGroup20.AutoSize = true;
+            this.labelNoGroup20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoGroup20.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelNoGroup20.Location = new System.Drawing.Point(385, 248);
+            this.labelNoGroup20.Name = "labelNoGroup20";
+            this.labelNoGroup20.Size = new System.Drawing.Size(27, 20);
+            this.labelNoGroup20.TabIndex = 16;
+            this.labelNoGroup20.Text = "20";
             // 
             // label11
             // 
@@ -254,32 +260,32 @@
             // 
             // chart1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(37, 353);
             this.chart1.Name = "chart1";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart1.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(297, 227);
             this.chart1.TabIndex = 18;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart2.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(369, 353);
             this.chart2.Name = "chart2";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart2.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(297, 227);
             this.chart2.TabIndex = 19;
             this.chart2.Text = "chart2";
@@ -322,7 +328,7 @@
             // buttonGenerateReport
             // 
             this.buttonGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGenerateReport.Location = new System.Drawing.Point(510, 21);
+            this.buttonGenerateReport.Location = new System.Drawing.Point(1046, 26);
             this.buttonGenerateReport.Name = "buttonGenerateReport";
             this.buttonGenerateReport.Size = new System.Drawing.Size(156, 44);
             this.buttonGenerateReport.TabIndex = 21;
@@ -350,11 +356,69 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "Sort by:";
             // 
+            // dateTimePickerSelection
+            // 
+            this.dateTimePickerSelection.Location = new System.Drawing.Point(179, 85);
+            this.dateTimePickerSelection.Name = "dateTimePickerSelection";
+            this.dateTimePickerSelection.Size = new System.Drawing.Size(234, 22);
+            this.dateTimePickerSelection.TabIndex = 25;
+            // 
+            // buttonChooseDate
+            // 
+            this.buttonChooseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChooseDate.Location = new System.Drawing.Point(438, 80);
+            this.buttonChooseDate.Name = "buttonChooseDate";
+            this.buttonChooseDate.Size = new System.Drawing.Size(111, 36);
+            this.buttonChooseDate.TabIndex = 26;
+            this.buttonChooseDate.Text = "Choose File";
+            this.buttonChooseDate.UseVisualStyleBackColor = true;
+            this.buttonChooseDate.Click += new System.EventHandler(this.buttonChooseDate_Click);
+            // 
+            // buttonSelectSort
+            // 
+            this.buttonSelectSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSelectSort.Location = new System.Drawing.Point(1095, 299);
+            this.buttonSelectSort.Name = "buttonSelectSort";
+            this.buttonSelectSort.Size = new System.Drawing.Size(92, 36);
+            this.buttonSelectSort.TabIndex = 27;
+            this.buttonSelectSort.Text = "Select";
+            this.buttonSelectSort.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
+            // labelNoGroup
+            // 
+            this.labelNoGroup.AutoSize = true;
+            this.labelNoGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoGroup.Location = new System.Drawing.Point(435, 157);
+            this.labelNoGroup.Name = "labelNoGroup";
+            this.labelNoGroup.Size = new System.Drawing.Size(68, 16);
+            this.labelNoGroup.TabIndex = 28;
+            this.labelNoGroup.Text = "No Group:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label10.Location = new System.Drawing.Point(516, 157);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 20);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "5";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1303, 607);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.labelNoGroup);
+            this.Controls.Add(this.buttonSelectSort);
+            this.Controls.Add(this.buttonChooseDate);
+            this.Controls.Add(this.dateTimePickerSelection);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.buttonGenerateReport);
@@ -362,10 +426,10 @@
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.labelNo20);
-            this.Controls.Add(this.labelNo15);
-            this.Controls.Add(this.labelNo10);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.labelNoGroup20);
+            this.Controls.Add(this.labelNoGroup15);
+            this.Controls.Add(this.labelNoGroup10);
+            this.Controls.Add(this.labelNoGroup5);
             this.Controls.Add(this.labelAdultNo);
             this.Controls.Add(this.labelNoChild);
             this.Controls.Add(this.label9);
@@ -404,10 +468,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label labelNoChild;
         private System.Windows.Forms.Label labelAdultNo;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label labelNo10;
-        private System.Windows.Forms.Label labelNo15;
-        private System.Windows.Forms.Label labelNo20;
+        private System.Windows.Forms.Label labelNoGroup5;
+        private System.Windows.Forms.Label labelNoGroup10;
+        private System.Windows.Forms.Label labelNoGroup15;
+        private System.Windows.Forms.Label labelNoGroup20;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
@@ -418,5 +482,11 @@
         private System.Windows.Forms.Button buttonGenerateReport;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dateTimePickerSelection;
+        private System.Windows.Forms.Button buttonChooseDate;
+        private System.Windows.Forms.Button buttonSelectSort;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.Label labelNoGroup;
+        private System.Windows.Forms.Label label10;
     }
 }
