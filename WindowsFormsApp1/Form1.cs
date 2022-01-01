@@ -272,6 +272,7 @@ namespace WindowsFormsApp1
                 visitor.price = ticketPrices.priceGroup20WholeDay;
             }
 
+
             return visitor.price;
         }
 
@@ -381,40 +382,40 @@ namespace WindowsFormsApp1
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            //string searchValue = textBoxSearch.Text;
-            //dataGridVisitor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            //try
-            //{
-            //    bool valueResult = false;
-            //    foreach (DataGridViewRow row in dataGridVisitor.Rows)
-            //    {
-            //        for (int i = 0; i < row.Cells.Count; i++)
-            //        {
-            //            if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
-            //            {
-            //                int rowIndex = row.Index;
-            //                dataGridVisitor.Rows[rowIndex].Selected = true;
-            //                valueResult = true;
-            //                break;
-            //            }
-            //        }
+            string searchValue = textBoxSearch.Text;
+            dataGridVisitor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                bool valueResult = false;
+                foreach (DataGridViewRow row in dataGridVisitor.Rows)
+                {
+                    for (int i = 0; i < row.Cells.Count; i++)
+                    {
+                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
+                        {
+                            int rowIndex = row.Index;
+                            dataGridVisitor.Rows[rowIndex].Selected = true;
+                            valueResult = true;
+                            break;
+                        }
+                    }
 
-            //    }
-            //    //if (!valueResult)
-            //    //{
-            //    //    MessageBox.Show("Unable to find " + textBoxSearch.Text, "Not Found");
-            //    //    return;
-            //    //}
-            //}
-            //catch (Exception exc)
-            //{
-            //    MessageBox.Show(exc.Message);
-            //}
+                }
+                //if (!valueResult)
+                //{
+                //    MessageBox.Show("Unable to find " + textBoxSearch.Text, "Not Found");
+                //    return;
+                //}
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
 
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dataGridVisitor.DataSource;
-            bs.Filter = "name like '%" + textBoxSearch.Text + "%'";
-            dataGridVisitor.DataSource = bs;
+            //BindingSource bs = new BindingSource();
+            //bs.DataSource = dataGridVisitor.DataSource;
+            //bs.Filter = "name like '%" + textBoxSearch.Text + "%'";
+            //dataGridVisitor.DataSource = bs;
 
         }
     }

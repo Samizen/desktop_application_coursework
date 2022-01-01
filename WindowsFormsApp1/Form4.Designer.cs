@@ -30,10 +30,8 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.labelReport = new System.Windows.Forms.Label();
             this.labelDailyReport = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,14 +50,11 @@
             this.labelNoGroup15 = new System.Windows.Forms.Label();
             this.labelNoGroup20 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.no_of_visitors = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_earnings = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chartNoOfVisitors = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartTotalEarning = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridWeeklyReport = new System.Windows.Forms.DataGridView();
             this.buttonGenerateReport = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSortCriteria = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePickerSelection = new System.Windows.Forms.DateTimePicker();
             this.buttonChooseDate = new System.Windows.Forms.Button();
@@ -67,9 +62,10 @@
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.labelNoGroup = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNoOfVisitors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotalEarning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridWeeklyReport)).BeginInit();
             this.SuspendLayout();
             // 
             // labelReport
@@ -258,99 +254,67 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Weekly Report";
             // 
-            // chart1
+            // chartNoOfVisitors
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartNoOfVisitors.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(37, 353);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(297, 227);
-            this.chart1.TabIndex = 18;
-            this.chart1.Text = "chart1";
+            this.chartNoOfVisitors.Legends.Add(legend1);
+            this.chartNoOfVisitors.Location = new System.Drawing.Point(671, 361);
+            this.chartNoOfVisitors.Name = "chartNoOfVisitors";
+            this.chartNoOfVisitors.Size = new System.Drawing.Size(611, 401);
+            this.chartNoOfVisitors.TabIndex = 18;
+            this.chartNoOfVisitors.Text = "chart1";
             // 
-            // chart2
+            // chartTotalEarning
             // 
             chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            this.chartTotalEarning.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(369, 353);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(297, 227);
-            this.chart2.TabIndex = 19;
-            this.chart2.Text = "chart2";
+            this.chartTotalEarning.Legends.Add(legend2);
+            this.chartTotalEarning.Location = new System.Drawing.Point(37, 361);
+            this.chartTotalEarning.Name = "chartTotalEarning";
+            this.chartTotalEarning.Size = new System.Drawing.Size(611, 401);
+            this.chartTotalEarning.TabIndex = 19;
+            this.chartTotalEarning.Text = "chart2";
             // 
-            // dataGridView1
+            // dataGridWeeklyReport
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.no_of_visitors,
-            this.total_earnings});
-            this.dataGridView1.Location = new System.Drawing.Point(684, 353);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(605, 227);
-            this.dataGridView1.TabIndex = 20;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Day";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // no_of_visitors
-            // 
-            this.no_of_visitors.HeaderText = "No. of Visitors";
-            this.no_of_visitors.MinimumWidth = 6;
-            this.no_of_visitors.Name = "no_of_visitors";
-            this.no_of_visitors.Width = 125;
-            // 
-            // total_earnings
-            // 
-            this.total_earnings.HeaderText = "Total Earnings";
-            this.total_earnings.MinimumWidth = 6;
-            this.total_earnings.Name = "total_earnings";
-            this.total_earnings.Width = 125;
+            this.dataGridWeeklyReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridWeeklyReport.Location = new System.Drawing.Point(677, 114);
+            this.dataGridWeeklyReport.Name = "dataGridWeeklyReport";
+            this.dataGridWeeklyReport.RowHeadersWidth = 51;
+            this.dataGridWeeklyReport.RowTemplate.Height = 24;
+            this.dataGridWeeklyReport.Size = new System.Drawing.Size(605, 227);
+            this.dataGridWeeklyReport.TabIndex = 20;
             // 
             // buttonGenerateReport
             // 
             this.buttonGenerateReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGenerateReport.Location = new System.Drawing.Point(1046, 26);
+            this.buttonGenerateReport.Location = new System.Drawing.Point(202, 285);
             this.buttonGenerateReport.Name = "buttonGenerateReport";
             this.buttonGenerateReport.Size = new System.Drawing.Size(156, 44);
             this.buttonGenerateReport.TabIndex = 21;
             this.buttonGenerateReport.Text = "Generate Report";
             this.buttonGenerateReport.UseVisualStyleBackColor = true;
+            this.buttonGenerateReport.Click += new System.EventHandler(this.buttonGenerateReport_Click);
             // 
-            // comboBox2
+            // comboBoxSortCriteria
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxSortCriteria.FormattingEnabled = true;
+            this.comboBoxSortCriteria.Items.AddRange(new object[] {
             "Number of Visitors",
             "Total Earnings"});
-            this.comboBox2.Location = new System.Drawing.Point(915, 303);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(155, 24);
-            this.comboBox2.TabIndex = 23;
+            this.comboBoxSortCriteria.Location = new System.Drawing.Point(933, 68);
+            this.comboBoxSortCriteria.Name = "comboBoxSortCriteria";
+            this.comboBoxSortCriteria.Size = new System.Drawing.Size(155, 24);
+            this.comboBoxSortCriteria.TabIndex = 23;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(857, 308);
+            this.label12.Location = new System.Drawing.Point(865, 76);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 16);
             this.label12.TabIndex = 24;
@@ -377,12 +341,13 @@
             // buttonSelectSort
             // 
             this.buttonSelectSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSelectSort.Location = new System.Drawing.Point(1095, 299);
+            this.buttonSelectSort.Location = new System.Drawing.Point(1118, 61);
             this.buttonSelectSort.Name = "buttonSelectSort";
             this.buttonSelectSort.Size = new System.Drawing.Size(92, 36);
             this.buttonSelectSort.TabIndex = 27;
             this.buttonSelectSort.Text = "Select";
             this.buttonSelectSort.UseVisualStyleBackColor = true;
+            this.buttonSelectSort.Click += new System.EventHandler(this.buttonSelectSort_Click);
             // 
             // openFileDialog2
             // 
@@ -413,18 +378,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 607);
+            this.ClientSize = new System.Drawing.Size(1303, 783);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelNoGroup);
             this.Controls.Add(this.buttonSelectSort);
             this.Controls.Add(this.buttonChooseDate);
             this.Controls.Add(this.dateTimePickerSelection);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxSortCriteria);
             this.Controls.Add(this.buttonGenerateReport);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.chart2);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.dataGridWeeklyReport);
+            this.Controls.Add(this.chartTotalEarning);
+            this.Controls.Add(this.chartNoOfVisitors);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.labelNoGroup20);
             this.Controls.Add(this.labelNoGroup15);
@@ -445,9 +410,9 @@
             this.Controls.Add(this.labelReport);
             this.Name = "Form4";
             this.Text = "Form4";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNoOfVisitors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotalEarning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridWeeklyReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,14 +438,11 @@
         private System.Windows.Forms.Label labelNoGroup15;
         private System.Windows.Forms.Label labelNoGroup20;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn no_of_visitors;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total_earnings;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartNoOfVisitors;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTotalEarning;
+        private System.Windows.Forms.DataGridView dataGridWeeklyReport;
         private System.Windows.Forms.Button buttonGenerateReport;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxSortCriteria;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePickerSelection;
         private System.Windows.Forms.Button buttonChooseDate;
@@ -488,5 +450,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.Label labelNoGroup;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

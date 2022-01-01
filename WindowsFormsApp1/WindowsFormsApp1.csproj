@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WeeklyReport.cs" />
     <Compile Include="TicketPrices.cs" />
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
